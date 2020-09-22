@@ -27,12 +27,14 @@ class AuthServiceProvider extends ServiceProvider
 
         Passport::routes();
 
-        Passport::personalAccessClientId(
-            config('passport.personal_access_client.id')
-        );
+        Passport::tokensCan([
+            'access-user-profile' => 'Access your user profile'
+        ]);
 
-        Passport::personalAccessClientSecret(
-            config('passport.personal_access_client.secret')
-        );
+        Passport::setDefaultScope([
+            'access-user-profile'
+        ]);
+
+        Passport::tokensExpireIn(now()->addDays(60));
     }
 }
