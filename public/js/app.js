@@ -2271,21 +2271,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   /*
    * The component's data.
@@ -2438,12 +2423,6 @@ function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "functi
 __webpack_require__.r(__webpack_exports__);
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
-//
-//
-//
-//
-//
-//
 //
 //
 //
@@ -39077,7 +39056,7 @@ var render = function() {
                   _c(
                     "tbody",
                     _vm._l(_vm.tokens, function(token) {
-                      return _c("tr", [
+                      return _c("tr", { key: token.client.id }, [
                         _c(
                           "td",
                           { staticStyle: { "vertical-align": "middle" } },
@@ -39230,7 +39209,7 @@ var render = function() {
                 _c(
                   "tbody",
                   _vm._l(_vm.clients, function(client) {
-                    return _c("tr", [
+                    return _c("tr", { key: client.id }, [
                       _c(
                         "td",
                         { staticStyle: { "vertical-align": "middle" } },
@@ -39328,11 +39307,11 @@ var render = function() {
         attrs: { id: "modal-create-client", tabindex: "-1", role: "dialog" }
       },
       [
-        _c("div", { staticClass: "modal-dialog" }, [
+        _c("div", { staticClass: "modal-dialog modal-dialog-centered" }, [
           _c("div", { staticClass: "modal-content" }, [
             _vm._m(1),
             _vm._v(" "),
-            _c("div", { staticClass: "modal-body" }, [
+            _c("div", { staticClass: "modal-body px-4" }, [
               _vm.createForm.errors.length > 0
                 ? _c("div", { staticClass: "alert alert-danger" }, [
                     _vm._m(2),
@@ -39342,7 +39321,7 @@ var render = function() {
                     _c(
                       "ul",
                       _vm._l(_vm.createForm.errors, function(error) {
-                        return _c("li", [
+                        return _c("li", { key: error }, [
                           _vm._v(
                             "\n                                " +
                               _vm._s(error) +
@@ -39357,11 +39336,11 @@ var render = function() {
               _vm._v(" "),
               _c("form", { attrs: { role: "form" } }, [
                 _c("div", { staticClass: "form-group row" }, [
-                  _c("label", { staticClass: "col-md-3 col-form-label" }, [
-                    _vm._v("Name")
+                  _c("label", { staticClass: "col-md-12 col-form-label" }, [
+                    _vm._v("Name:")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-9" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
                     _c("input", {
                       directives: [
                         {
@@ -39408,11 +39387,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group row" }, [
-                  _c("label", { staticClass: "col-md-3 col-form-label" }, [
-                    _vm._v("Redirect URL")
+                  _c("label", { staticClass: "col-md-12 col-form-label" }, [
+                    _vm._v("Redirect URL:")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-9" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
                     _c("input", {
                       directives: [
                         {
@@ -39463,13 +39442,12 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group row" }, [
-                  _c("label", { staticClass: "col-md-3 col-form-label" }, [
-                    _vm._v("Confidential")
-                  ]),
-                  _vm._v(" "),
-                  _c("div", { staticClass: "col-md-9" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
                     _c("div", { staticClass: "checkbox" }, [
                       _c("label", [
+                        _vm._v(
+                          "\n                                        Confidential:\n                                        "
+                        ),
                         _c("input", {
                           directives: [
                             {
@@ -39523,35 +39501,33 @@ var render = function() {
                       _vm._v(
                         "\n                                    Require the client to authenticate with a secret. Confidential clients can hold credentials in a secure way without exposing them to unauthorized parties. Public applications, such as native desktop or JavaScript SPA applications, are unable to hold secrets securely.\n                                "
                       )
-                    ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-dark btn-block mt-3",
+                        attrs: { type: "button" },
+                        on: { click: _vm.store }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Create\n                                "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-block text-danger",
+                        attrs: { type: "button", "data-dismiss": "modal" }
+                      },
+                      [_vm._v("Close")]
+                    )
                   ])
                 ])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "modal-footer" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-secondary",
-                  attrs: { type: "button", "data-dismiss": "modal" }
-                },
-                [_vm._v("Close")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  attrs: { type: "button" },
-                  on: { click: _vm.store }
-                },
-                [
-                  _vm._v(
-                    "\n                        Create\n                    "
-                  )
-                ]
-              )
             ])
           ])
         ])
@@ -39565,11 +39541,11 @@ var render = function() {
         attrs: { id: "modal-edit-client", tabindex: "-1", role: "dialog" }
       },
       [
-        _c("div", { staticClass: "modal-dialog" }, [
+        _c("div", { staticClass: "modal-dialog modal-dialog-centered" }, [
           _c("div", { staticClass: "modal-content" }, [
             _vm._m(3),
             _vm._v(" "),
-            _c("div", { staticClass: "modal-body" }, [
+            _c("div", { staticClass: "modal-body px-4" }, [
               _vm.editForm.errors.length > 0
                 ? _c("div", { staticClass: "alert alert-danger" }, [
                     _vm._m(4),
@@ -39579,7 +39555,7 @@ var render = function() {
                     _c(
                       "ul",
                       _vm._l(_vm.editForm.errors, function(error) {
-                        return _c("li", [
+                        return _c("li", { key: error }, [
                           _vm._v(
                             "\n                                " +
                               _vm._s(error) +
@@ -39594,11 +39570,11 @@ var render = function() {
               _vm._v(" "),
               _c("form", { attrs: { role: "form" } }, [
                 _c("div", { staticClass: "form-group row" }, [
-                  _c("label", { staticClass: "col-md-3 col-form-label" }, [
-                    _vm._v("Name")
+                  _c("label", { staticClass: "col-md-12 col-form-label" }, [
+                    _vm._v("Name:")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-9" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
                     _c("input", {
                       directives: [
                         {
@@ -39645,11 +39621,11 @@ var render = function() {
                 ]),
                 _vm._v(" "),
                 _c("div", { staticClass: "form-group row" }, [
-                  _c("label", { staticClass: "col-md-3 col-form-label" }, [
-                    _vm._v("Redirect URL")
+                  _c("label", { staticClass: "col-md-12 col-form-label" }, [
+                    _vm._v("Redirect URL:")
                   ]),
                   _vm._v(" "),
-                  _c("div", { staticClass: "col-md-9" }, [
+                  _c("div", { staticClass: "col-md-12" }, [
                     _c("input", {
                       directives: [
                         {
@@ -39695,35 +39671,33 @@ var render = function() {
                       _vm._v(
                         "\n                                    Your application's authorization callback URL.\n                                "
                       )
-                    ])
+                    ]),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-dark btn-block mt-3",
+                        attrs: { type: "button" },
+                        on: { click: _vm.update }
+                      },
+                      [
+                        _vm._v(
+                          "\n                                    Save Changes\n                                "
+                        )
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "button",
+                      {
+                        staticClass: "btn btn-block text-danger",
+                        attrs: { type: "button", "data-dismiss": "modal" }
+                      },
+                      [_vm._v("Close")]
+                    )
                   ])
                 ])
               ])
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "modal-footer" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-secondary",
-                  attrs: { type: "button", "data-dismiss": "modal" }
-                },
-                [_vm._v("Close")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  attrs: { type: "button" },
-                  on: { click: _vm.update }
-                },
-                [
-                  _vm._v(
-                    "\n                        Save Changes\n                    "
-                  )
-                ]
-              )
             ])
           ])
         ])
@@ -39737,11 +39711,11 @@ var render = function() {
         attrs: { id: "modal-client-secret", tabindex: "-1", role: "dialog" }
       },
       [
-        _c("div", { staticClass: "modal-dialog" }, [
+        _c("div", { staticClass: "modal-dialog modal-dialog-centered" }, [
           _c("div", { staticClass: "modal-content" }, [
             _vm._m(5),
             _vm._v(" "),
-            _c("div", { staticClass: "modal-body" }, [
+            _c("div", { staticClass: "modal-body px-4" }, [
               _c("p", [
                 _vm._v(
                   "\n                        Here is your new client secret. This is the only time it will be shown so don't lose it!\n                        You may now use this secret to make API requests.\n                    "
@@ -39768,10 +39742,17 @@ var render = function() {
                     _vm.clientSecret = $event.target.value
                   }
                 }
-              })
-            ]),
-            _vm._v(" "),
-            _vm._m(6)
+              }),
+              _vm._v(" "),
+              _c(
+                "button",
+                {
+                  staticClass: "btn text-danger btn-block mt-3",
+                  attrs: { type: "button", "data-dismiss": "modal" }
+                },
+                [_vm._v("Close")]
+              )
+            ])
           ])
         ])
       ]
@@ -39802,22 +39783,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
-      _c("h4", { staticClass: "modal-title" }, [
+      _c("h4", { staticClass: "modal-title font-weight-bold" }, [
         _vm._v("\n                        Create Client\n                    ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-hidden": "true"
-          }
-        },
-        [_vm._v("×")]
-      )
+      ])
     ])
   },
   function() {
@@ -39834,22 +39802,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
-      _c("h4", { staticClass: "modal-title" }, [
+      _c("h4", { staticClass: "modal-title font-weight-bold" }, [
         _vm._v("\n                        Edit Client\n                    ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-hidden": "true"
-          }
-        },
-        [_vm._v("×")]
-      )
+      ])
     ])
   },
   function() {
@@ -39866,37 +39821,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
-      _c("h4", { staticClass: "modal-title" }, [
+      _c("h4", { staticClass: "modal-title font-weight-bold" }, [
         _vm._v("\n                        Client Secret\n                    ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-hidden": "true"
-          }
-        },
-        [_vm._v("×")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-footer" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-secondary",
-          attrs: { type: "button", "data-dismiss": "modal" }
-        },
-        [_vm._v("Close")]
-      )
+      ])
     ])
   }
 ]
@@ -39977,7 +39904,7 @@ var render = function() {
                   _c(
                     "tbody",
                     _vm._l(_vm.tokens, function(token) {
-                      return _c("tr", [
+                      return _c("tr", { key: token.name }, [
                         _c(
                           "td",
                           { staticStyle: { "vertical-align": "middle" } },
@@ -40030,11 +39957,11 @@ var render = function() {
         attrs: { id: "modal-create-token", tabindex: "-1", role: "dialog" }
       },
       [
-        _c("div", { staticClass: "modal-dialog" }, [
+        _c("div", { staticClass: "modal-dialog modal-dialog-centered" }, [
           _c("div", { staticClass: "modal-content" }, [
             _vm._m(1),
             _vm._v(" "),
-            _c("div", { staticClass: "modal-body" }, [
+            _c("div", { staticClass: "modal-body px-4" }, [
               _vm.form.errors.length > 0
                 ? _c("div", { staticClass: "alert alert-danger" }, [
                     _vm._m(2),
@@ -40044,7 +39971,7 @@ var render = function() {
                     _c(
                       "ul",
                       _vm._l(_vm.form.errors, function(error) {
-                        return _c("li", [
+                        return _c("li", { key: error }, [
                           _vm._v(
                             "\n                                " +
                               _vm._s(error) +
@@ -40070,11 +39997,11 @@ var render = function() {
                 },
                 [
                   _c("div", { staticClass: "form-group row" }, [
-                    _c("label", { staticClass: "col-md-4 col-form-label" }, [
-                      _vm._v("Name")
+                    _c("label", { staticClass: "col-md-12 col-form-label" }, [
+                      _vm._v("Name:")
                     ]),
                     _vm._v(" "),
-                    _c("div", { staticClass: "col-md-6" }, [
+                    _c("div", { staticClass: "col-md-12" }, [
                       _c("input", {
                         directives: [
                           {
@@ -40108,14 +40035,14 @@ var render = function() {
                         _c(
                           "label",
                           { staticClass: "col-md-4 col-form-label" },
-                          [_vm._v("Scopes")]
+                          [_vm._v("Scopes:")]
                         ),
                         _vm._v(" "),
                         _c(
                           "div",
                           { staticClass: "col-md-6" },
                           _vm._l(_vm.scopes, function(scope) {
-                            return _c("div", [
+                            return _c("div", { key: scope.id }, [
                               _c("div", { staticClass: "checkbox" }, [
                                 _c("label", [
                                   _c("input", {
@@ -40141,32 +40068,36 @@ var render = function() {
                           0
                         )
                       ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  _vm.scopes.length > 0
+                    ? _c("div", { staticClass: "form-group row" }, [
+                        _c("div", { staticClass: "col-md-12" }, [
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-dark btn-block",
+                              attrs: { type: "button" },
+                              on: { click: _vm.store }
+                            },
+                            [
+                              _vm._v(
+                                "\n                                    Create\n                                "
+                              )
+                            ]
+                          ),
+                          _vm._v(" "),
+                          _c(
+                            "button",
+                            {
+                              staticClass: "btn btn-block text-danger",
+                              attrs: { type: "button", "data-dismiss": "modal" }
+                            },
+                            [_vm._v("Close")]
+                          )
+                        ])
+                      ])
                     : _vm._e()
-                ]
-              )
-            ]),
-            _vm._v(" "),
-            _c("div", { staticClass: "modal-footer" }, [
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-secondary",
-                  attrs: { type: "button", "data-dismiss": "modal" }
-                },
-                [_vm._v("Close")]
-              ),
-              _vm._v(" "),
-              _c(
-                "button",
-                {
-                  staticClass: "btn btn-primary",
-                  attrs: { type: "button" },
-                  on: { click: _vm.store }
-                },
-                [
-                  _vm._v(
-                    "\n                        Create\n                    "
-                  )
                 ]
               )
             ])
@@ -40182,25 +40113,48 @@ var render = function() {
         attrs: { id: "modal-access-token", tabindex: "-1", role: "dialog" }
       },
       [
-        _c("div", { staticClass: "modal-dialog" }, [
+        _c("div", { staticClass: "modal-dialog modal-dialog-centered" }, [
           _c("div", { staticClass: "modal-content" }, [
             _vm._m(3),
             _vm._v(" "),
-            _c("div", { staticClass: "modal-body" }, [
+            _c("div", { staticClass: "modal-body px-4" }, [
               _c("p", [
                 _vm._v(
                   "\n                        Here is your new personal access token. This is the only time it will be shown so don't lose it!\n                        You may now use this token to make API requests.\n                    "
                 )
               ]),
               _vm._v(" "),
+              _c("textarea", {
+                directives: [
+                  {
+                    name: "model",
+                    rawName: "v-model",
+                    value: _vm.accessToken,
+                    expression: "accessToken"
+                  }
+                ],
+                staticClass: "form-control",
+                attrs: { rows: "10" },
+                domProps: { value: _vm.accessToken },
+                on: {
+                  input: function($event) {
+                    if ($event.target.composing) {
+                      return
+                    }
+                    _vm.accessToken = $event.target.value
+                  }
+                }
+              }),
+              _vm._v(" "),
               _c(
-                "textarea",
-                { staticClass: "form-control", attrs: { rows: "10" } },
-                [_vm._v(_vm._s(_vm.accessToken))]
+                "button",
+                {
+                  staticClass: "btn btn-block text-danger mt-3",
+                  attrs: { type: "button", "data-dismiss": "modal" }
+                },
+                [_vm._v("Close")]
               )
-            ]),
-            _vm._v(" "),
-            _vm._m(4)
+            ])
           ])
         ])
       ]
@@ -40221,22 +40175,9 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
-      _c("h4", { staticClass: "modal-title" }, [
+      _c("h4", { staticClass: "modal-title font-weight-bold" }, [
         _vm._v("\n                        Create Token\n                    ")
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-hidden": "true"
-          }
-        },
-        [_vm._v("×")]
-      )
+      ])
     ])
   },
   function() {
@@ -40253,39 +40194,11 @@ var staticRenderFns = [
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
     return _c("div", { staticClass: "modal-header" }, [
-      _c("h4", { staticClass: "modal-title" }, [
+      _c("h4", { staticClass: "modal-title font-weight-bold" }, [
         _vm._v(
           "\n                        Personal Access Token\n                    "
         )
-      ]),
-      _vm._v(" "),
-      _c(
-        "button",
-        {
-          staticClass: "close",
-          attrs: {
-            type: "button",
-            "data-dismiss": "modal",
-            "aria-hidden": "true"
-          }
-        },
-        [_vm._v("×")]
-      )
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "modal-footer" }, [
-      _c(
-        "button",
-        {
-          staticClass: "btn btn-secondary",
-          attrs: { type: "button", "data-dismiss": "modal" }
-        },
-        [_vm._v("Close")]
-      )
+      ])
     ])
   }
 ]

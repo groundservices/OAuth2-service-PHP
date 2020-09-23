@@ -36,7 +36,7 @@
                         </thead>
 
                         <tbody>
-                            <tr v-for="token in tokens">
+                            <tr v-for="token in tokens" :key="token.name">
                                 <!-- Client Name -->
                                 <td style="vertical-align: middle;">
                                     {{ token.name }}
@@ -57,23 +57,21 @@
 
         <!-- Create Token Modal -->
         <div class="modal fade" id="modal-create-token" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title font-weight-bold">
                             Create Token
                         </h4>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body px-4">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="form.errors.length > 0">
                             <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
                             <br>
                             <ul>
-                                <li v-for="error in form.errors">
+                                <li v-for="error in form.errors" :key="error">
                                     {{ error }}
                                 </li>
                             </ul>
@@ -83,19 +81,19 @@
                         <form role="form" @submit.prevent="store">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-4 col-form-label">Name</label>
+                                <label class="col-md-12 col-form-label">Name:</label>
 
-                                <div class="col-md-6">
+                                <div class="col-md-12">
                                     <input id="create-token-name" type="text" class="form-control" name="name" v-model="form.name">
                                 </div>
                             </div>
 
                             <!-- Scopes -->
                             <div class="form-group row" v-if="scopes.length > 0">
-                                <label class="col-md-4 col-form-label">Scopes</label>
+                                <label class="col-md-4 col-form-label">Scopes:</label>
 
                                 <div class="col-md-6">
-                                    <div v-for="scope in scopes">
+                                    <div v-for="scope in scopes" :key="scope.id">
                                         <div class="checkbox">
                                             <label>
                                                 <input type="checkbox"
@@ -108,16 +106,17 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <div class="form-group row" v-if="scopes.length > 0">
+                                <div class="col-md-12">
+                                    <button type="button" class="btn btn-dark btn-block" @click="store">
+                                        Create
+                                    </button>
+
+                                    <button type="button" class="btn btn-block text-danger" data-dismiss="modal">Close</button>
+                                </div>
+                            </div>
                         </form>
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                        <button type="button" class="btn btn-primary" @click="store">
-                            Create
-                        </button>
                     </div>
                 </div>
             </div>
@@ -125,28 +124,23 @@
 
         <!-- Access Token Modal -->
         <div class="modal fade" id="modal-access-token" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title font-weight-bold">
                             Personal Access Token
                         </h4>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body px-4">
                         <p>
                             Here is your new personal access token. This is the only time it will be shown so don't lose it!
                             You may now use this token to make API requests.
                         </p>
 
-                        <textarea class="form-control" rows="10">{{ accessToken }}</textarea>
-                    </div>
+                        <textarea class="form-control" rows="10" v-model="accessToken"></textarea>
 
-                    <!-- Modal Actions -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-block text-danger mt-3" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>

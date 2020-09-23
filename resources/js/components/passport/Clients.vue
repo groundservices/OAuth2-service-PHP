@@ -37,7 +37,7 @@
                     </thead>
 
                     <tbody>
-                        <tr v-for="client in clients">
+                        <tr v-for="client in clients" :key="client.id">
                             <!-- ID -->
                             <td style="vertical-align: middle;">
                                 {{ client.id }}
@@ -74,23 +74,21 @@
 
         <!-- Create Client Modal -->
         <div class="modal fade" id="modal-create-client" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title font-weight-bold">
                             Create Client
                         </h4>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body px-4">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="createForm.errors.length > 0">
                             <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
                             <br>
                             <ul>
-                                <li v-for="error in createForm.errors">
+                                <li v-for="error in createForm.errors" :key="error">
                                     {{ error }}
                                 </li>
                             </ul>
@@ -100,11 +98,11 @@
                         <form role="form">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Name</label>
+                                <label class="col-md-12 col-form-label">Name:</label>
 
-                                <div class="col-md-9">
+                                <div class="col-md-12">
                                     <input id="create-client-name" type="text" class="form-control"
-                                                                @keyup.enter="store" v-model="createForm.name">
+                                        @keyup.enter="store" v-model="createForm.name">
 
                                     <span class="form-text text-muted">
                                         Something your users will recognize and trust.
@@ -114,11 +112,11 @@
 
                             <!-- Redirect URL -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Redirect URL</label>
+                                <label class="col-md-12 col-form-label">Redirect URL:</label>
 
-                                <div class="col-md-9">
+                                <div class="col-md-12">
                                     <input type="text" class="form-control" name="redirect"
-                                                    @keyup.enter="store" v-model="createForm.redirect">
+                                        @keyup.enter="store" v-model="createForm.redirect">
 
                                     <span class="form-text text-muted">
                                         Your application's authorization callback URL.
@@ -128,11 +126,11 @@
 
                             <!-- Confidential -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Confidential</label>
 
-                                <div class="col-md-9">
+                                <div class="col-md-12">
                                     <div class="checkbox">
                                         <label>
+                                            Confidential:
                                             <input type="checkbox" v-model="createForm.confidential">
                                         </label>
                                     </div>
@@ -140,18 +138,15 @@
                                     <span class="form-text text-muted">
                                         Require the client to authenticate with a secret. Confidential clients can hold credentials in a secure way without exposing them to unauthorized parties. Public applications, such as native desktop or JavaScript SPA applications, are unable to hold secrets securely.
                                     </span>
+
+                                    <button type="button" class="btn btn-dark btn-block mt-3" @click="store">
+                                        Create
+                                    </button>
+
+                                    <button type="button" class="btn btn-block text-danger" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                        <button type="button" class="btn btn-primary" @click="store">
-                            Create
-                        </button>
                     </div>
                 </div>
             </div>
@@ -159,23 +154,21 @@
 
         <!-- Edit Client Modal -->
         <div class="modal fade" id="modal-edit-client" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title font-weight-bold">
                             Edit Client
                         </h4>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body px-4">
                         <!-- Form Errors -->
                         <div class="alert alert-danger" v-if="editForm.errors.length > 0">
                             <p class="mb-0"><strong>Whoops!</strong> Something went wrong!</p>
                             <br>
                             <ul>
-                                <li v-for="error in editForm.errors">
+                                <li v-for="error in editForm.errors" :key="error">
                                     {{ error }}
                                 </li>
                             </ul>
@@ -185,11 +178,11 @@
                         <form role="form">
                             <!-- Name -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Name</label>
+                                <label class="col-md-12 col-form-label">Name:</label>
 
-                                <div class="col-md-9">
+                                <div class="col-md-12">
                                     <input id="edit-client-name" type="text" class="form-control"
-                                                                @keyup.enter="update" v-model="editForm.name">
+                                        @keyup.enter="update" v-model="editForm.name">
 
                                     <span class="form-text text-muted">
                                         Something your users will recognize and trust.
@@ -199,27 +192,24 @@
 
                             <!-- Redirect URL -->
                             <div class="form-group row">
-                                <label class="col-md-3 col-form-label">Redirect URL</label>
+                                <label class="col-md-12 col-form-label">Redirect URL:</label>
 
-                                <div class="col-md-9">
+                                <div class="col-md-12">
                                     <input type="text" class="form-control" name="redirect"
-                                                    @keyup.enter="update" v-model="editForm.redirect">
+                                        @keyup.enter="update" v-model="editForm.redirect">
 
                                     <span class="form-text text-muted">
                                         Your application's authorization callback URL.
                                     </span>
+
+                                    <button type="button" class="btn btn-dark btn-block mt-3" @click="update">
+                                        Save Changes
+                                    </button>
+
+                                    <button type="button" class="btn btn-block text-danger" data-dismiss="modal">Close</button>
                                 </div>
                             </div>
                         </form>
-                    </div>
-
-                    <!-- Modal Actions -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-
-                        <button type="button" class="btn btn-primary" @click="update">
-                            Save Changes
-                        </button>
                     </div>
                 </div>
             </div>
@@ -227,28 +217,23 @@
 
         <!-- Client Secret Modal -->
         <div class="modal fade" id="modal-client-secret" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
+            <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
-                        <h4 class="modal-title">
+                        <h4 class="modal-title font-weight-bold">
                             Client Secret
                         </h4>
-
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
                     </div>
 
-                    <div class="modal-body">
+                    <div class="modal-body px-4">
                         <p>
                             Here is your new client secret. This is the only time it will be shown so don't lose it!
                             You may now use this secret to make API requests.
                         </p>
 
                         <input type="text" class="form-control" v-model="clientSecret">
-                    </div>
 
-                    <!-- Modal Actions -->
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn text-danger btn-block mt-3" data-dismiss="modal">Close</button>
                     </div>
                 </div>
             </div>
