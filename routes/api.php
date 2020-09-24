@@ -18,9 +18,16 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/register', 'APIAuthController@register');
+Route::post('/register', 'API\AuthController@register');
 
-Route::post('/login', 'APIAuthController@login');
+Route::post('/login', 'API\AuthController@login');
 
-Route::post('/logout', 'APIAuthController@logout')->middleware('auth:api');
+Route::post('/logout', 'API\AuthController@logout')->middleware('auth:api');
+
+Route::group(['middleware' => ['web']], function () {
+
+    Route::get('login/{provider}', 'API\AuthController@redirectToProvider');
+
+    Route::get('login/{provider}/callback', 'API\AuthController@handleProviderCallback');
+});
 
