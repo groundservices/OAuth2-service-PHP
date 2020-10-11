@@ -80,7 +80,7 @@ class AuthController extends Controller
 
         if ($user = User::where('email', '=', $authUser->getEmail())->first()) {
 
-            return Redirect::to('http://localhost:8080/login?token=' . $user->createToken('Auth Token')->accessToken);
+            return Redirect::to(env('FRONTEND_LOGIN_URL') . '?token=' . $user->createToken('Auth Token')->accessToken);
 
         } else {
             $user = User::create([
@@ -89,7 +89,7 @@ class AuthController extends Controller
                 'password' => Str::random(40)
                 ]);
 
-            return Redirect::to('http://localhost:8080/login?token=' . $user->createToken('Auth Token')->accessToken);
+            return Redirect::to(env('FRONTEND_LOGIN_URL') . '?token=' . $user->createToken('Auth Token')->accessToken);
         }
     }
 
