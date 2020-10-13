@@ -5,7 +5,7 @@
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=alert_status" alt="quality gate status"></a>
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=security_rating" alt="quality gate status"></a>
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=vulnerabilities" alt="quality gate status"></a>
-<a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img alt="GitHub release (latest by date)" src="https://img.shields.io/github/v/release/groundservices/OAuth2-service-PHP"></a>
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img alt="GitHub" src="https://img.shields.io/github/license/groundservices/OAuth2-service-PHP"></a>
 </p>
 
