@@ -1,10 +1,12 @@
 <h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">Groundservices/Auth-service-PHP</a></h1>
 <br>
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://travis-ci.com/groundservices/OAuth2-service-PHP.svg" alt="Build Status"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=alert_status" alt="quality gate status"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=security_rating" alt="quality gate status"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=vulnerabilities" alt="quality gate status"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img alt="GitHub" src="https://img.shields.io/github/license/groundservices/OAuth2-service-PHP"></a>
 </p>
 
 ## About Groundservices
@@ -21,7 +23,7 @@ Groundservices is a web application framework with expressive, elegant syntax. W
 
 Groundservices is accessible, powerful, and provides tools required for large, robust applications.
 
-## Auth-service-php installation
+## OAuth2-service-php installation
 ### Requirements
 - Laravel 7.x
 - PHP 7.x.x
