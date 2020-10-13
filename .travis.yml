@@ -9,8 +9,7 @@ install:
 addons:
   sonarcloud:
     organization: "groundservices"
-    token:
-      secure: $SONAR_TOKEN
+    token: ${SONAR_TOKEN}
 
 before_script:
   - cp .env.travis .env    
