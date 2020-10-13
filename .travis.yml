@@ -6,14 +6,8 @@ php:
 install:
   - composer install
   
-addons:
-  sonarcloud:
-    organization: "groundservices"
-    token: ${SONAR_TOKEN}
-
 before_script:
   - cp .env.travis .env    
   
 script:
   - php artisan key:generate
-  - sonar-scanner -X
