@@ -10,7 +10,7 @@ addons:
   sonarcloud:
     organization: "groundservices"
     token:
-      secure: "fd5bd6c7ab1580bd1a79aeeefd1806b29b8cdad0"
+      secure: $SONAR_TOKEN
 
 before_script:
   - cp .env.travis .env    
