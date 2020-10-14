@@ -1,4 +1,4 @@
-<h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">Groundservices/Auth-service-PHP</a></h1>
+<h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">Auth-service-PHP</a></h1>
 <br>
 <p align="center">
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://travis-ci.com/groundservices/OAuth2-service-PHP.svg" alt="Build Status"></a>
@@ -22,12 +22,12 @@ Groundservices is a web application framework with expressive, elegant syntax. W
 
 Groundservices is accessible, powerful, and provides tools required for large, robust applications.
 
-## OAuth2-service-php installation
+## OAuth2-service-php setup guide
 ### Requirements
 - Laravel 7.x
 - PHP 7.x.x
 
-### Process
+### Installation
 1. Clone the repo
 2. Run the `composer install` command
 3. Migrate the database
@@ -50,32 +50,19 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=unhashed-client-secret-value
 
 ## Groundservices/Auth-serivce-php Docs
 
-Groundservices has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Groundservices has the most extensive and thorough [documentation](#), making it a breeze to get started with the micro services.
 
 ## Groundservices Sponsors
 
-We would like to extend our thanks to the following sponsors for funding Groundservices development. If you are interested in becoming a sponsor, please visit the Groundservices [Patreon page](https://patreon.com/taylorotwell).
-
-### Premium Partners
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[OP.GG](https://op.gg)**
+We would like to extend our thanks to our sponsors for funding Groundservices development. If you are interested in becoming a sponsor, please visit the Groundservices [Patreon page](https://www.patreon.com/lyndonmcjohnson).
 
 ## Contributing
 
-Thank you for considering contributing to Groundservices! The contribution guide can be found in the [Groundservices documentation](https://laravel.com/docs/contributions).
+Thank you for considering contributing to Groundservices! The contribution guide can be found in the [Groundservices documentation](#).
 
 ## Code of Conduct
 
-In order to ensure that the Groundservices community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+In order to ensure that the Groundservices community is welcoming to all, please review and abide by the [Code of Conduct](#).
 
 ## Security Vulnerabilities
 
