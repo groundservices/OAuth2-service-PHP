@@ -70,4 +70,4 @@ If you discover a security vulnerability within Groundservices, please send an e
 
 ## License
 
-The Auth service is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The OAuth2 service is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
