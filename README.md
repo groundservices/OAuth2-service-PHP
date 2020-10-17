@@ -10,7 +10,7 @@
 
 ## About OAuth2 service
 
-The OAuth2 service is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe development of microservices can be enjoyable as well as not too slow. Groundservices takes the pain out of micro service development by scaffolding basic components of a service, while leaving room for customization them with extra features.
+The OAuth2 service is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe development of microservices can be enjoyable as definitely shouldn't be time consuming at all. Groundservices takes the pain out of micro service development by scaffolding basic components of a service, while leaving room for customization them with extra features.
 
 ## OAuth2-service-php setup guide
 ### Requirements
