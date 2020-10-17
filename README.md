@@ -1,4 +1,4 @@
-<h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">Auth-service-PHP</a></h1>
+<h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">OAuth2-service-PHP</a></h1>
 <br>
 <p align="center">
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://travis-ci.com/groundservices/OAuth2-service-PHP.svg" alt="Build Status"></a>
@@ -8,19 +8,9 @@
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img alt="GitHub" src="https://img.shields.io/github/license/groundservices/OAuth2-service-PHP"></a>
 </p>
 
-## About Groundservices
+## About OAuth2 service
 
-Groundservices is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Groundservices takes the pain out of development by easing common tasks used in many web projects, such as:
-
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
-
-Groundservices is accessible, powerful, and provides tools required for large, robust applications.
+The OAuth2 service is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe development of microservices can be enjoyable as well as not too slow. Groundservices takes the pain out of micro service development by scaffolding basic components of a service, while leaving room for customization them with extra features.
 
 ## OAuth2-service-php setup guide
 ### Requirements
