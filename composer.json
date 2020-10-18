@@ -1,10 +1,11 @@
 {
-    "name": "laravel/laravel",
+    "name": "groundservices/oauth2",
     "type": "project",
-    "description": "The Laravel Framework.",
+    "description": "An OAuth2 micro service",
     "keywords": [
-        "framework",
-        "laravel"
+        "micro service",
+        "groundservices",
+        "OAuth2"
     ],
     "license": "MIT",
     "require": {
