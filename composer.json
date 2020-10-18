@@ -1,5 +1,5 @@
 {
-    "name": "groundservices/oauth2",
+    "name": "groundservices/oauth2-service",
     "type": "project",
     "description": "An OAuth2 micro service",
     "keywords": [
