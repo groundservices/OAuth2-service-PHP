@@ -10,16 +10,19 @@
 
 ## About OAuth2 service
 
-The OAuth2 service is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe development of microservices can be enjoyable as definitely shouldn't be time consuming at all. Groundservices OAuth2 service takes the pain out of authentication developoment by scaffolding basic components of an authentication service, while leaving room for customization with extra features.
+The OAuth2 service is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe that development of micro services can be enjoyable and definitely shouldn't be time consuming. Groundservices OAuth2 service takes the pain out of authentication developoment by scaffolding basic components of an authentication service, while leaving room for customization with extra features.
 
 ## OAuth2-service-php setup guide
 ### Requirements
-- Laravel 7.x
+- <a href="https://getcomposer.org/">Composer</a>
 - PHP 7.x.x
 
 ### Installation
-1. Clone the repo
-2. Run the `composer install` command
+1. Install the OAuth2 project
+```
+composer create-project groundservices/OAuth2 <project-name>
+```
+2. Run the `composer install` command to install dependancies
 3. Migrate the database
 ```
 php artisan migrate
@@ -40,7 +43,7 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=unhashed-client-secret-value
 
 ## Groundservices/Auth-serivce-php Docs
 
-Groundservices has the most extensive and thorough [documentation](#), making it a breeze to get started with the micro services.
+Groundservices has a very extensive and thorough [documentation](#), making it a breeze to get started with the micro services setup.
 
 ## Groundservices Sponsors
 
