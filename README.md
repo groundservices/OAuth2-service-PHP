@@ -22,7 +22,7 @@ The OAuth2 service is a highly capable and customizable authentication micresoer
 ```
 composer create-project groundservices/OAuth2 <project-name>
 ```
-2. Run the `composer install` command to install dependancies
+2. Run the `composer install && composer update` command to install and update dependancies
 3. Migrate the database
 ```
 php artisan migrate
