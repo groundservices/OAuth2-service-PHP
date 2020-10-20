@@ -47,22 +47,10 @@ The OAuth2 service is used by making API calls to the service from a seaparate f
 Below are the available endpoints to intereact to with the OAuth2 service.
 Note that it is strongly recommended to channel the requests through an API gateway rather than directly from the front end app.
 
--register:
-```
-/api/register
-```
-- login:
-```
-/api/login
-```
--logout:
-```
-/api/logout
-```
--login with github
-```
-/api/login/github
-```
+- register:`/api/register`
+- login:`/api/login`
+- logout:`/api/logout`
+- login with github`/api/login/github`
 
 ## Docs
 
