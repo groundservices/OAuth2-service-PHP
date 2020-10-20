@@ -1,4 +1,4 @@
-<h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">OAuth2-service-PHP</a></h1>
+<h1 align="center" style="font-weight: bold;"><a href="#" target="_blank">Groundservices OAuth2</a></h1>
 <br>
 <p align="center">
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://travis-ci.com/groundservices/OAuth2-service-PHP.svg" alt="Build Status"></a>
@@ -6,13 +6,14 @@
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=security_rating" alt="quality gate status"></a>
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img src="https://sonarcloud.io/api/project_badges/measure?project=groundservices_OAuth2-service-PHP&metric=vulnerabilities" alt="quality gate status"></a>
 <a href="https://github.com/groundservices/OAuth2-service-PHP"><img alt="GitHub" src="https://img.shields.io/github/license/groundservices/OAuth2-service-PHP"></a>
+<a href="https://github.com/groundservices/OAuth2-service-PHP"><img alt="Packagist Version" src="https://img.shields.io/packagist/v/groundservices/oauth2-service"></a>
 </p>
 
-## About OAuth2 service
+## Introduction
 
-The OAuth2 service is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe that development of micro services can be enjoyable and definitely shouldn't be time consuming. Groundservices OAuth2 service takes the pain out of authentication developoment by scaffolding basic components of an authentication service, while leaving room for customization with extra features.
+The groundservices OAuth2 is a highly capable and customizable authentication micresoervice built on top of the laravel framework. We believe that development of micro services can be enjoyable and definitely shouldn't be time consuming. Groundservices OAuth2 service takes the pain out of authentication developoment by scaffolding basic components of an authentication service, while leaving room for customization with extra features.
 
-## OAuth2-service-php setup guide
+## Setup guide
 ### Requirements
 - <a href="https://getcomposer.org/">Composer</a>
 - PHP 7.x.x
@@ -41,11 +42,33 @@ PASSPORT_PERSONAL_ACCESS_CLIENT_ID=client-id-value
 PASSPORT_PERSONAL_ACCESS_CLIENT_SECRET=unhashed-client-secret-value
 ```
 
-## Groundservices/Auth-serivce-php Docs
+### Usage
+The OAuth2 service is used by making API calls to the service from a seaparate front end which may either reside on the same domain or an entirely fifferent domain.
+Below are the available endpoints to intereact to with the OAuth2 service.
+Note that it is strongly recommended to channel the requests through an API gateway rather than directly from the front end app.
+
+-register:
+```
+/api/register
+```
+- login:
+```
+/api/login
+```
+-logout:
+```
+/api/logout
+```
+-login with github
+```
+/api/login/github
+```
+
+## Docs
 
 Groundservices has a very extensive and thorough [documentation](#), making it a breeze to get started with the micro services setup.
 
-## Groundservices Sponsors
+## Sponsors
 
 We would like to extend our thanks to our sponsors for funding Groundservices development. If you are interested in becoming a sponsor, please visit the Groundservices [Patreon page](https://www.patreon.com/lyndonmcjohnson).
 
