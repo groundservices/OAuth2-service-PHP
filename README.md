@@ -52,21 +52,6 @@ Note that it is strongly recommended to channel the requests through an API gate
 - logout:`/api/logout`
 - login with github`/api/login/github`
 
-## Docs
-
-Groundservices has a very extensive and thorough [documentation](#), making it a breeze to get started with the micro services setup.
-
-## Sponsors
-
-We would like to extend our thanks to our sponsors for funding Groundservices development. If you are interested in becoming a sponsor, please visit the Groundservices [Patreon page](https://www.patreon.com/lyndonmcjohnson).
-
-## Contributing
-
-Thank you for considering contributing to Groundservices! The contribution guide can be found in the [Groundservices documentation](#).
-
-## Code of Conduct
-
-In order to ensure that the Groundservices community is welcoming to all, please review and abide by the [Code of Conduct](#).
 
 ## Security Vulnerabilities
 
